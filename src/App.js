@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let currDate = new Date();
+currDate = currDate.getHours();
+let greet='';
+const cssStyle = {};
+
+if (currDate >= 1 && currDate <12){
+  greet = "Good Morning 🌅"; //window + '.' for emoji
+  cssStyle.color = 'green';
+  document.title = 'Greet . Morning'; //changing title of page
+}
+else if (currDate>=12 && currDate <19){
+  greet = "Good Afternoon 🌇";
+  cssStyle.color = 'orange';
+  document.title = 'Greet . Afternoon';
+}
+else {
+  greet = "Good Night 🌙";
+  cssStyle.color = 'black';
+  //will change title in tik tok form
+  setInterval(() =>{  
+  document.title = 'Greet . Good';
+  },2000);
+  setInterval(() =>{
+  document.title = 'Greet . Night';
+  },1500);
+  // document.title = 'Greet . Night';
+}
+
+return (
+    <>
+  <div>
+  <h1>Hello Sir, <span style={cssStyle}>{greet}</span> </h1>
+  </div>
+  </>
+);
 }
 
 export default App;
