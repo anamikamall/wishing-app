@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wishing-app/static/css/main.179d2196.css",
+    "main.js": "/wishing-app/static/js/main.53635ec3.js",
+    "index.html": "/wishing-app/index.html",
+    "main.179d2196.css.map": "/wishing-app/static/css/main.179d2196.css.map",
+    "main.53635ec3.js.map": "/wishing-app/static/js/main.53635ec3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.179d2196.css",
+    "static/js/main.53635ec3.js"
+  ]
+}
